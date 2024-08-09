@@ -1,0 +1,12 @@
+{
+  "displayName": "MXM Library",
+  "components": [
+    {
+      "name": "MXMRadarChart",
+      "manifest": "./src/components/MXMRadarChart/manifest.json"
+    }
+  ],
+  "author": "",
+  "description": "",
+  "logo": "./example-logo.png"
+}
