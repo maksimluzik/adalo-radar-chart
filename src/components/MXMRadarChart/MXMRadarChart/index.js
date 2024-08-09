@@ -23,19 +23,17 @@ ChartJS.register(
 );
 
 const MXMRadarChart = ({ data, labels, title, backgroundColor, borderColor }) => {
-  // Ensure labels is an array
-  if (!Array.isArray(labels)) {
-    console.error("Labels must be an array.");
-    return <div>Error: Labels must be an array.</div>;
-  }
+  // Fallback mechanism if props are missing or invalid
+  labels = Array.isArray(labels) ? labels : MXMRadarChart.defaultProps.labels;
+  data = Array.isArray(data) ? data : MXMRadarChart.defaultProps.data;
 
-  // Ensure that labels and data arrays have the same length
+  // Ensure that labels and data have the same length
   if (labels.length !== data.length) {
-    console.warn("Labels and data lengths do not match.");
+    console.error("Labels and data lengths do not match.");
     return <div>Error: Labels and data lengths do not match.</div>;
   }
 
-  // Ensure that data and labels are not empty
+  // Ensure labels and data arrays are not empty
   if (labels.length === 0 || data.length === 0) {
     return <div>No data available</div>;
   }
@@ -61,16 +59,16 @@ const MXMRadarChart = ({ data, labels, title, backgroundColor, borderColor }) =>
     scale: {
       ticks: {
         beginAtZero: true,
-        fontColor: '#424242',
+        fontColor: '#424242', // Default text color
       },
       pointLabels: {
         fontSize: 14,
-        fontColor: '#424242',
+        fontColor: '#424242', // Default text color
       },
     },
     legend: {
       labels: {
-        fontColor: '#424242',
+        fontColor: '#424242', // Default text color
       },
     },
     responsive: true,
