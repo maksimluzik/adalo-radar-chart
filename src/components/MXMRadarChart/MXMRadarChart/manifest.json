@@ -1,5 +1,7 @@
 {
   "displayName": "MXM Radar Chart",
+  "defaultWidth": 500,
+  "defaultHeight": 500,
   "description": "A customizable radar chart for visualizing data.",
   "author": "Maksim Luzik",
   "version": "0.1.0",
@@ -8,14 +10,20 @@
   "props": [
     {
       "name": "data",
-      "displayName": "Data",
-      "type": "array",
+      "displayName": "Data Points",
+      "type": "list",
+      "items": {
+        "type": "number"
+      },
       "default": [65, 59, 90, 81, 56, 55, 40]
     },
     {
       "name": "labels",
       "displayName": "Labels",
-      "type": "array",
+      "type": "list",
+      "items": {
+        "type": "string"
+      },
       "default": ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"]
     },
     {

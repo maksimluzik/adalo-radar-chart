@@ -1,0 +1,40 @@
+/* style.css */
+
+.radar-chart-container {
+  width: 100%;
+  height: 100%;
+  background-color: #FBFEFF; /* Default background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radar-chart-canvas {
+  font-family: serif;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.radar-chart-labels {
+  color: #424242; /* Default text color */
+}
+
+.radar-chart-data {
+  background-color: rgba(0, 191, 198, 0.2); /* Primary color with transparency */
+  border-color: #00BFC6; /* Primary color */
+  border-width: 2px;
+}
+
+.radar-chart-points {
+  background-color: #00BFC6; /* Primary color */
+  border-color: #003C58; /* Secondary color */
+}
+
+.radar-chart-points-hover {
+  background-color: #003C58; /* Secondary color */
+  border-color: #00BFC6; /* Primary color */
+}
+
+.radar-chart-legend {
+  color: #424242; /* Default text color */
+}
