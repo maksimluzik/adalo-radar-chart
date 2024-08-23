@@ -92,12 +92,4 @@ class MXMRadarChart extends Component {
   }
 }
 
-MXMRadarChart.defaultProps = {
-  labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-  data: [65, 59, 90, 81, 56, 55, 40],
-  title: "My Radar Chart",
-  backgroundColor: 'rgba(34, 202, 236, 0.2)',
-  borderColor: '#00BFC6'
-};
-
 export default MXMRadarChart;
